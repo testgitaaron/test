@@ -1,0 +1,24 @@
+假設當前commit為
+a->b->c->d->(e)
+
+若要加a~e全部變成一個commit
+則可以下git rebase -i aID
+
+這時候會顯示以下{被-i的commit不會在上面}
+pick b
+pick c
+pick d
+pick e
+
+pick表示使用commit的意思
+而有個squash表示與前一個commit結合
+也就是說a就無法下squash
+所以改成
+pick a
+squash b
+squash c
+squash d
+squash e
+
+之後會跳出你最後決定要改怎樣的message
+改完之後就會全部合併成一個commit了.
