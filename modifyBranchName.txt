@@ -1,1 +1,8 @@
-test
+先輸入git branch -m oldName newName
+將local端的branch改為新的
+並且把舊的Branch從remote端刪掉
+git push origin -d oldName
+之後解除oldBranch的連結
+git branch --unset-upstream <old_name>
+最後將新branch推上去
+git push -u origin newBranch
