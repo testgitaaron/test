@@ -6,3 +6,8 @@ git push origin -d oldName
 git branch --unset-upstream <new_name>
 最後將新branch推上去
 git push -u origin newBranch
+
+方法二
+再改完local端的branch name之後
+git push origin :oldName newName
+即可改掉remove branch name
