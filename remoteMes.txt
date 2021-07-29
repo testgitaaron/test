@@ -2,6 +2,7 @@
 此時發現C的commit message打錯
 想要修改時 可以使用--amend
 完整為git commit --amend -m "new message"
-這時會像再一次commit一個node一樣
-此時只要下git push -f就會把上一次push的commit覆蓋掉
+此時tree會像 A -> B -> C
+                 |--> (D)
+再來只要下git push -f就會把上一次push的commit覆蓋掉
 但要是不加f它會強制你要git pull
