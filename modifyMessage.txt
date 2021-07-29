@@ -1,3 +1,4 @@
+[commit 已經被推上去的情況]
 假設當前的tree為 A -> B -> (C)
 此時發現C的commit message打錯
 想要修改時 可以使用--amend
@@ -10,4 +11,8 @@
 把C Merge到D裡面去像是
 A -> B -> D -> E 
      |-> C ----^  
-1
+
+[commit 還沒被推上去]
+假設當前commit了一個錯誤的message上去後
+若想要修改它可以使用git reset --soft HEAD^
+退回上一次的commit之後重新commit
