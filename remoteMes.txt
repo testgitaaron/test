@@ -6,3 +6,7 @@
                  |--> (D)
 再來只要下git push -f就會把上一次push的commit覆蓋掉
 但要是不加f它會強制你要git pull
+這時候就會像是開了一個新的branch一樣
+把C Merge到D裡面去像是
+A -> B -> D -> E 
+     |-> C ----^  
