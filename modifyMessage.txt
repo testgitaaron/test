@@ -1,0 +1,18 @@
+[commit 已經被推上去的情況]
+假設當前的tree為 A -> B -> (C)
+此時發現C的commit message打錯
+想要修改時 可以使用--amend
+完整為git commit --amend -m "new message"
+此時tree會像 A -> B -> C
+                 |--> (D)
+再來只要下git push -f就會把上一次push的commit覆蓋掉
+但要是不加f它會強制你要git pull
+這時候就會像是開了一個新的branch一樣
+把C Merge到D裡面去像是
+A -> B -> D -> E 
+     |-> C ----^  
+
+[commit 還沒被推上去]
+假設當前commit了一個錯誤的message上去後
+若想要修改它可以使用git reset --soft HEAD^
+退回上一次的commit之後重新commit
